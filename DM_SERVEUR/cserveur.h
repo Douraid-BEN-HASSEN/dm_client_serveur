@@ -17,6 +17,7 @@
 #include <QTime>
 
 #include <QDebug>
+//typage des erreurs
 enum Errors {
     MISSING_ACTION,
     MISSING_LOGIN,
@@ -44,7 +45,7 @@ private:
     QList<QTcpSocket*> mListSockets;
     QMap<QString, QList<QString>> pendingMsg;
 
-    bool initServer();
+    void initServer();
 
     Errors doLogin(QString, QString);
     Errors doRegister(QString, QString);
