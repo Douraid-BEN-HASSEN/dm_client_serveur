@@ -19,6 +19,7 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class mainFRM; }
 QT_END_NAMESPACE
 
+// Classe de login & communication serveur
 class mainFRM : public QMainWindow
 {
     Q_OBJECT
