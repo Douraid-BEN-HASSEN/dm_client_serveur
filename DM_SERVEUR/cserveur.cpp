@@ -5,10 +5,10 @@
 CServeur::CServeur(QObject *p) : QObject(p)
 {
     this->_serveur = new QTcpServer();
-    this->initServer();
+    this->initServer(); // initialisation du serveur
 }
 
-bool CServeur::initServer()
+void CServeur::initServer()
 {
     // init fichier/dossier
     QDir dossier(QDir::currentPath());
@@ -88,9 +88,6 @@ bool CServeur::initServer()
         std::cout << "SERVEUR (" << this->_host.toString().toStdString() << ":" << this->_port << ")" << std::endl;
         return true;
     }
-
-
-    return false;
 }
 
 void CServeur::parseJson(QByteArray pData)
