@@ -5,7 +5,7 @@
 CServeur::CServeur(QObject *p) : QObject(p)
 {
     this->_serveur = new QTcpServer();
-    this->initServer(); // initialisation du serveur
+    this->initServer();
 }
 
 void CServeur::initServer()
@@ -86,8 +86,8 @@ void CServeur::initServer()
             system("clear");
         #endif
         std::cout << "SERVEUR (" << this->_host.toString().toStdString() << ":" << this->_port << ")" << std::endl;
-        return true;
     }
+
 }
 
 void CServeur::parseJson(QByteArray pData)
