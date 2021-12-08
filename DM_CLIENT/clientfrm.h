@@ -14,7 +14,7 @@ class clientFRM;
 }
 
 /**
- * @brief The clientFRM class
+ * Classe qui gère l'interface graphique client principale
  */
 class clientFRM : public QMainWindow
 {
