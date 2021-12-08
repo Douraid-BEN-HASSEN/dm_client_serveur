@@ -10,6 +10,11 @@ CServeur::CServeur(QObject *p) : QObject(p)
 
 void CServeur::initServer()
 {
+    /**
+      [1] check paths
+      [2] check vars
+      [3] lancer le serveur
+      */
     // init fichier/dossier
     QDir dossier(QDir::currentPath());
     if (!QDir(dossier.currentPath() + "/logs").exists()){
